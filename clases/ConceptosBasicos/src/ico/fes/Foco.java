@@ -39,6 +39,11 @@ public class Foco {
     public void setTamano(int tamano) {
         this.tamano = tamano;
     }
+
+    @Override
+    public String toString() {
+        return "Foco{" + "color=" + color + ", tipo=" + tipo + ", tamano=" + tamano + '}';
+    }
     
     
 }
