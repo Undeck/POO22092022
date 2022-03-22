@@ -4,7 +4,9 @@
  */
 package conceptosbasicos;
 
+import ico.fes.Alumno;
 import ico.fes.Automovil;
+import ico.fes.Persona;
 import ico.fes.Silla;
 import java.awt.Color;
 
@@ -38,6 +40,17 @@ public class ConceptosBasicos {
           Automovil miAcura=new Automovil("Acura", "NSX", 2013, Color.gray);
           System.out.println(miAcura);
           
+          Persona per1 = new Persona();
+          //per1.edad=20;
+          //No se permite por seguridad
+           per1.setEdad(22);
+          System.out.println(per1);
+          
+          Alumno al = new Alumno();
+          al.setNombre("Jose");
+          al.setNumeroCuenta("05247215");
+          
+          System.out.println(al);
     }
     
 }
