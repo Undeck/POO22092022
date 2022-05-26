@@ -9,8 +9,6 @@ package ico.fes.herencia;
  * @author OmarA
  */
 public interface Artista {
-        
     public abstract void ensayar();
     public abstract void presentar();
-    
 }

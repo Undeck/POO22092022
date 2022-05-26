@@ -7,7 +7,6 @@ package ico.fes.awt;
 import java.awt.Button;
 import java.awt.FlowLayout;
 import java.awt.Frame;
-import java.awt.GraphicsConfiguration;
 import java.awt.HeadlessException;
 import java.awt.Label;
 import java.awt.TextField;
@@ -19,10 +18,8 @@ import java.awt.event.MouseListener;
  * @author OmarA
  */
 public class Ventana extends Frame implements MouseListener{
-    
     private String titulo;
     private Button boton1;
-    
     private FlowLayout layout;
     private Label etiqueta;
     private TextField cuadroTexto;
@@ -32,23 +29,17 @@ public class Ventana extends Frame implements MouseListener{
 
     public Ventana(String titulo) throws HeadlessException {
         super(titulo);
-        this.setSize(350, 220);
-        layout = new FlowLayout(FlowLayout.LEFT);
+        this.setSize(350,220);
+        layout= new FlowLayout(FlowLayout.LEFT);
         this.setLayout(layout);
-        boton1= new Button("Presioname");
-        
+        boton1 = new Button("Presioname");
         cuadroTexto = new TextField(15);
-        etiqueta = new Label ("Texto inicial");
-        
+        etiqueta = new Label("Texto inicial");
         this.add(cuadroTexto);
         this.add(boton1);
         this.add(etiqueta);
-        
         this.boton1.addMouseListener(this);
-        
         this.setVisible(true);
-        
-        
     }
 
     public String getTitulo() {
@@ -66,21 +57,18 @@ public class Ventana extends Frame implements MouseListener{
 
     @Override
     public void mouseClicked(MouseEvent me) {
-        System.out.println("Clic del ratón ");
+        System.out.println("Click de ratón");
         etiqueta.setText("Hola " + cuadroTexto.getText());
-        
     }
 
     @Override
     public void mousePressed(MouseEvent me) {
         //System.out.println("Botón presionado");
-
     }
 
     @Override
     public void mouseReleased(MouseEvent me) {
         //System.out.println("Botón liberado");
-
     }
 
     @Override
@@ -90,9 +78,8 @@ public class Ventana extends Frame implements MouseListener{
 
     @Override
     public void mouseExited(MouseEvent me) {
-        //System.out.println("El cursor salió del componente ");
+        //System.out.println("El cursor salió del componente");
     }
-
-
+    
     
 }

@@ -9,9 +9,8 @@ package ico.fes.herencia;
  * @author OmarA
  */
 public class Persona {
-        
-        protected String nombre;
-        protected int edad;
+    protected String nombre;
+    protected int edad;
 
     public Persona() {
     }
@@ -39,14 +38,10 @@ public class Persona {
 
     @Override
     public String toString() {
-        return "Persona{" + "nombre =" + nombre + ", edad =" + edad + '}';
+        return  nombre + "," + edad;
     }
-        
-        public void comer(){
-            System.out.println(nombre +" esta comiendo...");
-        }
     
-        
-   
-                
+    public void comer(){
+        System.out.println(nombre + " está comiendo...");
+    }
 }

@@ -9,7 +9,6 @@ package ico.fes;
  * @author OmarA
  */
 public class Cuadrado implements Figura {
-    
     private float lado;
 
     public Cuadrado() {
@@ -18,12 +17,7 @@ public class Cuadrado implements Figura {
     public Cuadrado(float lado) {
         this.lado = lado;
     }
-
-    @Override
-    public float calcularArea() {
-        System.out.println("Multiplicando lado por lado");
-        return this.lado*this.lado;
-    }
+    
 
     public float getLado() {
         return lado;
@@ -38,6 +32,12 @@ public class Cuadrado implements Figura {
         return "Cuadrado{" + "lado=" + lado + '}';
     }
     
+    
+    @Override
+    public float calcularArea() {
+        System.out.println("Multiplicando lado por lado");
+        return this.lado*this.lado;
+    }
     
     
 }

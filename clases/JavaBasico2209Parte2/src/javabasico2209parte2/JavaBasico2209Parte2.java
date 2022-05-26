@@ -22,9 +22,9 @@ public class JavaBasico2209Parte2 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-       
-        /*Excepciones*/
-        ArrayList <String> nombres = new ArrayList<String>();
+        // TODO code application logic here
+        //Excepciones
+        ArrayList<String> nombres=new ArrayList<String>();
         nombres.add("Alma");
         nombres.add("Bartolo");
         nombres.add("Carlos");
@@ -33,68 +33,65 @@ public class JavaBasico2209Parte2 {
         
         for (String nombre : nombres) {
             System.out.println(nombre);
-            
         }
         
-        System.out.println("-------------");
+        System.out.println("-----------------------");
         Scanner teclado = new Scanner(System.in);
+        int seleccion = 0;
         
-        int seleccion = 0; //teclado.nextInt();
-        
-        String elNombre = "";
+        String elNombre="";
         try {
             seleccion = teclado.nextInt();
-            elNombre= nombres.get(seleccion);
-        }catch(InputMismatchException e){
-            System.out.println("Debes teclar valores numericos");
-        }catch(IndexOutOfBoundsException e){
+           elNombre = nombres.get(seleccion);
+        }catch(InputMismatchException ie){
+            System.out.println("Debes teclear valores numéricos");
+        } catch(IndexOutOfBoundsException ioe){
             System.out.println("Error, debe ser entre 0 y 4");
             elNombre = nombres.get(0);
-        }
-        catch (Exception e) {
-            System.out.println("Generica");
+        }catch (Exception e) {
+            System.out.println(e);
+            System.out.println("Genérica");
             elNombre = nombres.get(1);
-            
         } finally {
             System.out.println(elNombre);
-            elNombre=null; //Limpieza
+            //elNombre=null;
+            //Limpieza
         }
         
-        //System.out.println (nombres.get(seleccion));
+        System.out.println(nombres.get(seleccion));
         
         System.out.println("Continua el programa ...");
         
-        Aritmetica cal = new Aritmetica(2,0);
-        System.out.println(cal.getA()+"+"+cal.getB()+"="+cal.sumar());
+        Aritmetica cal = new Aritmetica(2, 4);
+        System.out.println(cal.getA() + "+" + cal.getB() + "=" + cal.sumar());
         
-        try {
-            System.out.println(cal.getA()+"/"+cal.getB()+"="+cal.dividir());
-        } catch (Exception e) {
+        try{
+        System.out.println(cal.getA() + "/" + cal.getB() + "=" + cal.dividir());
+        } catch(Exception e){
             System.out.println("Error de aritmetica");
         }
         
-        System.out.println("Fin del programa");
+        System.out.println("Fin del programa");  //Regla de oro: Evitar que un programa termine de forma abrupta
         
-        System.out.println("---------------------Hasta aquí----------------------");
+        System.out.println("--------------------Hasta aquí--------------------");
+        
         Cuadrado cuad = new Cuadrado(5.0f);
         Circulo circ = new Circulo(4.5f);
         
-        System.out.println("Area del cuadrado es: "+ cuad.calcularArea());
-        System.out.println("Area del circulo es: "+circ.calcularArea());
+        System.out.println("Área del cuadrado es: " + cuad.calcularArea());
+        System.out.println("Área del círculo es: " + circ.calcularArea());
         
-        System.out.println("--------------------------------------");
-        
+        System.out.println("----------------------------------------------------------");
         EstudianteDeportistaArtista eda = new EstudianteDeportistaArtista();
-        eda.setNombre("Diana");
+        eda.setNombre("Griss");
         eda.setCarrera("ICO");
         eda.setDisciplinaDeportiva("Futbol");
-        eda.setGeneroArtistico("Fotografia, guitarra, *");
-        eda.setEdad(18);
-        eda.setNombre("Yo");
-        eda.setNumeroCuenta("422012511");
-     
+        eda.setGeneroArtistico("Fotografía, body paint, dibujo");
+        eda.comer();
+        eda.ensayar();
+        eda.entrenar();
+        System.out.println(eda);
         
-               
     }
     
 }

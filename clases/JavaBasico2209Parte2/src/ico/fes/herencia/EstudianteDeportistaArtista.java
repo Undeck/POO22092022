@@ -9,7 +9,6 @@ package ico.fes.herencia;
  * @author OmarA
  */
 public class EstudianteDeportistaArtista extends Persona implements Deportista,Artista{
-    
     private String carrera;
     private String numeroCuenta;
     private String disciplinaDeportiva;
@@ -57,30 +56,25 @@ public class EstudianteDeportistaArtista extends Persona implements Deportista,A
         this.disciplinaDeportiva = disciplinaDeportiva;
     }
 
-
     @Override
     public void entrenar() {
-        System.out.println(this.nombre+"esta entrenando"+this.disciplinaDeportiva);
+        System.out.println(this.nombre + " está entrenando " + this.disciplinaDeportiva);
     }
 
     @Override
     public void jugar() {
-        System.out.println(this.nombre + "esta jugando" + this.disciplinaDeportiva);
-
+        System.out.println(this.nombre + " está jugando " + this.disciplinaDeportiva);
     }
 
     @Override
     public void ensayar() {
-        System.out.println(this.nombre + " esta ensayando/practicando" + this.generoArtistico);
-
+        System.out.println(this.nombre + " está ensayando/practicando " + this.generoArtistico);
     }
 
     @Override
     public void presentar() {
-        System.out.println(this.nombre + "esta presentando su obra de " + this.generoArtistico);
-
+        System.out.println(this.nombre + " está presentando su obra de " + this.generoArtistico);
     }
-
     
     
 }
